@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nadiah Alkhloufah | Cybersecurity Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        * { box-sizing: border-box; font-family: 'Cairo', sans-serif; margin: 0; padding: 0; }
+        
+        body { 
+            background-image: url('9.gif'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-color: #0b0b1a; 
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Top Section: Identity & Socials */
+        .top-section {
+            width: 100%;
+            max-width: 580px;
+            margin-top: 150px;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .profile-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 25px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .profile-card h1 { font-size: 30px; margin-bottom: 10px; }
+        .profile-card p { font-size: 15px; line-height: 1.6; opacity: 0.9; }
+
+        .social-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .circle-btn {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: white;
+            font-size: 20px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .circle-btn:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 0, 0, 0.2); /* Red hover effect */
+            border-color: #ff0000;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+        }
+
+        /* Animated Red Scroll Arrow */
+        .arrow-section {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 150px; 
+            margin-bottom: 150px;
+        }
+
+        .scroll-arrow {
+            font-size: 45px; /* تم تكبير الحجم */
+            color: #ff0000; /* اللون الأحمر */
+            text-shadow: 0 0 20px rgba(255, 0, 0, 0.8); /* توهج أحمر قوي */
+            animation: bounceUpDown 1.5s infinite ease-in-out;
+            cursor: pointer;
+        }
+
+        @keyframes bounceUpDown {
+            0%, 100% { transform: translateY(0); opacity: 0.7; }
+            50% { transform: translateY(25px); opacity: 1; }
+        }
+
+        /* Bottom Section: Separated & Dark */
+        .bottom-section {
+            width: 100%;
+            max-width: 650px;
+            margin-bottom: 120px;
+            padding: 0 20px;
+        }
+
+        .content-box {
+            background: rgba(0, 0, 0, 0.268); 
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 0, 0, 0.1); /* إطار أحمر خفيف جداً */
+            border-radius: 20px;
+            padding: 40px;
+            text-align: left;
+        }
+
+        .sub-header {
+            font-size: 18px;
+            color: #6969eaf3; /* تغيير لون العناوين للأحمر للتناسق */
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .info-list {
+            list-style: none;
+            margin-bottom: 45px;
+        }
+
+        .info-list:last-child { margin-bottom: 0; }
+
+        .info-list li {
+            font-size: 14.5px;
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+            line-height: 1.6;
+            color: #e0e0e0;
+        }
+
+        .info-list li::before {
+            content: "\f105"; 
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: #4d5ce2;
+        }
+
+        .email-box {
+            max-height: 0;
+            overflow: hidden;
+            transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            width: fit-content;
+            margin: 15px auto;
+            opacity: 0;
+        }
+
+        .email-box.show {
+            max-height: 80px;
+            padding: 10px 25px;
+            border: 1px solid rgba(255,255,255,0.1);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-section">
+        <div class="profile-card">
+            <h1>Nadiah Alkhloufah</h1>
+            <p>Cybersecurity Analyst | Network Security & Incident Response. Major in Network Security with Web Applications Development skills and AWS Cloud Computing (Tuwaiq Academy). Certified eCIRv2 & eJPTv2 ..</p>
+        </div>
+
+        <div class="social-container">
+            <a href="https://www.linkedin.com/in/nadiah-alkhloufah-a4503919a/" target="_blank" class="circle-btn"><i class="fab fa-linkedin-in"></i></a>
+            <div class="circle-btn" id="emailBtn"><i class="fas fa-envelope"></i></div>
+            <a href="https://github.com/nall9" target="_blank" class="circle-btn"><i class="fab fa-github"></i></a>
+            <a href="nadiahfayezmyCV.pdf" target="_blank" class="circle-btn"><i class="fas fa-file-pdf"></i></a>
+        </div>
+
+        <div class="email-box" id="emailContent">
+            <span style="font-weight: bold;">alshehrin9@hotmail.com</span>
+        </div>
+    </div>
+
+    <div class="arrow-section">
+        <div class="scroll-arrow">
+            <i class="fas fa-angle-double-down"></i>
+        </div>
+    </div>
+
+    <div class="bottom-section">
+        <div class="content-box">
+            
+            <div class="sub-header">
+                <i class="fas fa-award"></i> Professional Certifications
+            </div>
+            <ul class="info-list">
+                <li><strong>eCIRv2</strong> – Certified Incident Responder (INE Security)</li>
+                <li><strong>eJPTv2</strong> – Junior Penetration Tester (INE Security)</li>
+                <li><strong></strong> Networking Devices and Initial Configuration (Cisco)</li>
+            </ul>
+
+            <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.05); margin-bottom: 30px;">
+
+            <div class="sub-header">
+                <i class="fas fa-user-graduate"></i> Training & Bootcamps
+            </div>
+            <ul class="info-list">
+                <li>
+                    <strong>Saudi Federation for Cybersecurity, Programming and 
+Drones(SAFCSP)</strong>
+                    <span style="display: block; font-size: 13px; color: #bbb;">Cybersecurity Dept - COOP Training (6 Months)</span>
+                </li>
+                <li>
+                    <strong>Tuwaiq Academy – BootCamp</strong>
+                    <span style="display: block; font-size: 13px; color: #bbb;">Web Solution Development Bootcamp on AWS</span>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('emailBtn').addEventListener('click', function() {
+            document.getElementById('emailContent').classList.toggle('show');
+        });
+    </script>
+
+</body>
+</html>
